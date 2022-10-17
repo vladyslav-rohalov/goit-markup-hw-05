@@ -335,6 +335,7 @@ ul {
 
 .wrapper > p {
   color: var(--text-color-white);
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
@@ -398,6 +399,8 @@ ul {
   fill: var(--icon-color-grey);
   background-color: var(--header-background-color);
   border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon:hover,
@@ -430,6 +433,8 @@ ul {
   fill: var(--icon-color-grey);
   justify-content: center;
   align-items: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partners-logo:hover,
@@ -519,6 +524,7 @@ ul {
   fill: var(--text-color-white);
   background-color: var(--icon-footer-bg);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon:hover,
@@ -557,6 +563,9 @@ ul {
   border: none;
   text-align: center;
   padding: 6px 25px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-button:hover,
@@ -579,6 +588,7 @@ ul {
 
 .projects > .item {
   width: calc((100% - 60px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects > .item img {
@@ -648,12 +658,21 @@ ul {
   width: 100%;
   top: 0;
   left: 0;
+  opacity: 1;
+  transform: scale(1);
   background-color: var(--backdrop-bg-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  transform: translate(0, -100%) scale(0.1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
