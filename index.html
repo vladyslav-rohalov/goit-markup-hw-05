@@ -26,7 +26,7 @@
             >Web<span class="black">Studio</span></a
           >
           <ul class="site-nav">
-            <li class="item"><a href="index.html">Студія</a></li>
+            <li class="item blue-line"><a href="index.html">Студія</a></li>
             <li class="item"><a href="portfolio.html">Портфоліо</a></li>
             <li class="item"><a href="#">Контакти</a></li>
           </ul>
@@ -59,13 +59,15 @@
         Ефективні рішення для <br />
         вашого бізнесу
       </h1>
-      <button type="button" class="button">Замовити послугу</button>
+      <button type="button" class="button" data-modal-open>
+        Замовити послугу
+      </button>
     </div>
 
     <main>
       <section class="section features">
         <div class="container">
-          <h2 class="hiden-headline">Наші переваги</h2>
+          <h2 class="visually-hidden">Наші переваги</h2>
           <ul class="features-list">
             <li class="item thumb">
               <svg class="icon">
@@ -129,27 +131,36 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="product-flex">
             <li class="item">
-              <img
-                src="./images/write-code.jpg"
-                alt="Пишимо якісний код"
-                width="370"
-              />
+              <div class="wrapper">
+                <img
+                  src="./images/write-code.jpg"
+                  alt="Пишимо якісний код"
+                  width="370"
+                />
+                <p class="label">Десктопні додатки</p>
+              </div>
             </li>
 
             <li class="item">
-              <img
-                src="./images/adopting.jpg"
-                alt="Адаптуємо під мобільні пристрої"
-                width="370"
-              />
+              <div class="wrapper">
+                <img
+                  src="./images/adopting.jpg"
+                  alt="Адаптуємо під мобільні пристрої"
+                  width="370"
+                />
+                <p class="label">Мобільні додатки</p>
+              </div>
             </li>
 
             <li class="item">
-              <img
-                src="./images/graph-design.jpg"
-                alt="Робимо графічний дизайн"
-                width="370"
-              />
+              <div class="wrapper">
+                <img
+                  src="./images/graph-design.jpg"
+                  alt="Робимо графічний дизайн"
+                  width="370"
+                />
+                <p class="label">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -533,5 +544,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn-modal" data-modal-close>
+          <svg class="close">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
